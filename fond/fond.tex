@@ -1,0 +1,80 @@
+\documentclass[18pt]{beamer}
+
+%\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[orientation=portrait,size=a0,scale=1.5]{beamerposter}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+% NAVIGATION SYMBOLS
+\setbeamertemplate{navigation symbols}{}
+
+\usepackage{xcolor}
+
+\definecolor{BleuFonce}{RGB}{0, 49, 99}
+\mode<presentation>
+
+% Colors
+\setbeamercolor{structure}{fg=BleuFonce}
+
+%% headline
+\setbeamertemplate{headline}{
+  \leavevmode%
+  \begin{tikzpicture}[remember picture,inner sep=0pt]
+    \node[anchor=north west,outer sep=0pt] (logo) at (0,0) {
+        \includegraphics[width=\textwidth]{headline}
+      };
+    \node[anchor=north west] (labsticc) at (8.7,-1.5) {
+      \includegraphics[width=9.4cm]{logo-lab-sticc}
+    };
+    \node[anchor=south west,BleuFonce,font=\bf\footnotesize] (nom) at ([yshift=4mm]labsticc.south) {
+      UMR 6285
+    };
+  \end{tikzpicture}
+
+}
+
+%% footline
+\setbeamertemplate{footline}{
+  \leavevmode
+  \begin{tikzpicture}[remember picture,inner sep=0pt]
+    \node[anchor=north west] (footline) at (0,0) {
+      \includegraphics[width=\textwidth]{footline}
+    };
+    \node[anchor=north west] (labsticc) at (1.2,-0.6) {
+      \includegraphics[width=6cm]{logo-lab-sticc}
+    };
+    \node[anchor=north west,text width=11.4cm,BleuFonce,font=\bf\scriptsize] (labsticc) at (1.2,-4.) {
+      Des capteurs à la connaissance : Communiquer et décider
+    };
+    \node[anchor=north west,text width=6.4cm,BleuFonce,font=\bf\scriptsize] (www) at (8.2,-1.8) {
+      \texttt{www.labsticc.fr}\\ UMR 6285
+    };
+    \coordinate (middle) at ($(footline.north)!0.5!(footline.south)$);
+    \node[anchor=west,white,opacity=0.34,fill,minimum width=37cm,minimum height=4cm] at ([xshift=4.5cm]middle) {};
+    \node[anchor=west] (cnrs) at ([xshift=5.5cm]middle) {\includegraphics[height=2.4cm]{cnrs-poster}};
+    \node[anchor=west] (enib) at ([xshift=1.4cm]cnrs.east) {\includegraphics[height=2cm]{enib-poster}};
+    \node[anchor=west] (ensta) at ([xshift=1.4cm]enib.east) {\includegraphics[height=2.4cm]{ensta-poster}};
+    \node[anchor=west] (imta) at ([xshift=1.4cm]ensta.east) {\includegraphics[height=2.4cm]{imta-poster}};
+    \node[anchor=west] (ubo) at ([xshift=1.4cm,yshift=-3mm]imta.east) {\includegraphics[height=2.4cm]{ubo-poster}};
+    \node[anchor=west] (ubs) at ([xshift=1.4cm,yshift=6mm]ubo.east) {\includegraphics[height=2.4cm]{ubs-poster}};
+  \end{tikzpicture}
+
+}
+
+
+\mode<all>
+
+
+
+\begin{document}
+
+
+\begin{frame}
+
+~
+
+\end{frame}
+
+\end{document}
+

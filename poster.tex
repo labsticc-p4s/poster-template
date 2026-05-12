@@ -1,0 +1,94 @@
+\documentclass{beamer}
+
+\usepackage{lmodern}
+\usepackage[orientation=portrait,scale=1.5]{beamerposter}
+\usepackage{tikz}
+\usetikzlibrary{backgrounds,calc,shapes,arrows.meta,fit,intersections,decorations.text,patterns}
+
+\definecolor{BleuFonce}{RGB}{0, 49, 99}
+\definecolor{RougeBrique}{RGB}{153,33,53}
+
+\definecolor{BleuClair}{RGB}{110, 186, 225}
+
+% BEAMER
+
+% Colors
+\setbeamercolor{structure}{fg=BleuFonce}
+\setbeamercolor*{alerted text}{fg=RougeBrique}
+
+\setbeamercolor*{palette primary}{fg=BleuFonce}
+\setbeamercolor*{palette secondary}{fg=BleuFonce}
+\setbeamercolor*{palette tertiary}{fg=BleuFonce}
+
+% ITEMIZE
+\setbeamercolor*{itemize item}{fg=BleuFonce}
+\setbeamercolor*{itemize subitem}{fg=BleuFonce}
+
+\setbeamercolor*{itemize/enumerate body}{parent=normal text}
+\setbeamercolor*{itemize/enumerate subbody}{parent=normal text}
+
+\defbeamertemplate{itemize item}{bigsquare}{\hbox{\vrule width 1ex height 1ex}}
+\defbeamertemplate{itemize subitem}{smallcircle}{\tikz{\fill[inner sep=0mm] circle (2mm);}}
+\setbeamertemplate{itemize item}[bigsquare]
+\setbeamertemplate{itemize subitem}[smallcircle]
+
+% NAVIGATION SYMBOLS
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamersize{text margin left=2em,text margin right=1em}
+
+% BACKGROUND IMAGE
+\pgfdeclareimage[height=\paperheight,width=\paperwidth]{background}{fond/fond}
+\setbeamertemplate{background canvas}{
+  \pgfuseimage{background}%
+}
+%% TO ADD A GRID TO HELP PLACEMENT UNCOMMENT
+%%\setbeamertemplate{background}[grid][step=2cm]
+
+%% headline
+\setbeamertemplate{headline}{
+  \leavevmode
+  \begin{tikzpicture}[remember picture]
+    \node (bol) at (19,0) {\vphantom{X}};
+    \node[text=BleuFonce,anchor=west,font=\huge,text width=48cm,align=left] (poster-title) at ([xshift=2cm,yshift=-4cm]bol.center) {\inserttitle};
+    \node[anchor=west,align=center,font=\Large] (logo) at ([yshift=-5mm]poster-title.east) {Équipe\\[8mm] \includegraphics[height=5cm]{images/p4s-logo}};
+    \node at (0,-10.4) {\vphantom{X}};
+  \end{tikzpicture}
+}
+
+
+%% footline
+\setbeamertemplate{footline}{
+  \leavevmode
+  \vspace{1.75cm}
+
+  \small\color{BleuFonce}
+  \hspace{16cm}Auteur :
+  \vspace*{6mm}
+
+  \hspace{16cm}Site web :
+
+  \vspace*{0.9cm}
+  \hspace{\fill}{\footnotesize version \the\year{}}
+  \vspace*{0.4cm}
+}
+
+\title{Le titre}
+
+
+\begin{document}
+
+\begin{frame}[t,fragile]
+
+  \begin{center}
+   \Large Bla
+  \end{center}
+
+  \vspace{3cm}
+
+  BlaBla
+
+
+\end{frame}
+
+\end{document}

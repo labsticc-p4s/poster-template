@@ -1,0 +1,14 @@
+Le template est composé de deux éléments :
+
+- un fichier fond/fond.tex qui permet de produire fond/fond.pdf qui représente le fond
+  avec la partie logos et images
+
+- un fichier poster.tex qui repose sur le pdf de fond ci-dessus, ce fichier contient la
+  partie texte
+
+Les fichiers sont plutôt pour une version en français. Pour de l'anglais, il faut modifier
+également modifier le fond (fond/fond.tex) pour modifier le slogan du Lab-STICC.
+Il faut tout d'abord compiler fond/fond.tex si on le modifie.
+
+
+Il faut avoir les paquets latex suivants : beamer, lmodern, beamerposter, type1cm et tikz
